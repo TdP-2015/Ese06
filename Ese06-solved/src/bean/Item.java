@@ -11,13 +11,26 @@ package bean;
 //             // 03FYZ - Tecniche di programmazione 2014-15                  //
 ////////////////////////////////////////////////////////////////////////////////
 
-public class Item {
+public class Item implements Comparable<Item> {
 	protected int id;
-	protected int peso;
+	protected Integer weight;
 
 	public Item(int i, int p) {
 		super();
 		id = i;
-		peso = p;
+		weight = p;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return id + ":" + weight;
+	}
+
+	@Override
+	public int compareTo(Item arg0) {
+		return arg0.weight.compareTo(weight);
 	}
 }

@@ -23,7 +23,7 @@ import bean.*;
 
 public class SimpleDAO {
 	public List<Item> getObjectList() {
-		final String sql = "SELECT * FROM oggetti LIMIT 50";
+		final String sql = "SELECT * FROM oggetti ORDER BY peso DESC LIMIT 50";
 		List<Item> items = new ArrayList<Item>();
 	
 		try {
