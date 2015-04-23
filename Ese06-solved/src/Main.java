@@ -17,7 +17,7 @@ import bean.*;
 import dao.*;
 
 public class Main {
-	private List<Oggetto> oggetti;
+	private List<Item> oggetti;
 	
 	public static void main(String[] args) {
 		Main m = new Main();

@@ -11,11 +11,11 @@ package bean;
 //             // 03FYZ - Tecniche di programmazione 2014-15                  //
 ////////////////////////////////////////////////////////////////////////////////
 
-public class Oggetto {
+public class Item {
 	protected int id;
 	protected int peso;
 
-	public Oggetto(int i, int p) {
+	public Item(int i, int p) {
 		super();
 		id = i;
 		peso = p;

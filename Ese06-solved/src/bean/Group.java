@@ -14,7 +14,7 @@ package bean;
 
 import java.util.Set;
 
-public class Gruppo {
-	protected Set<Oggetto> oggetti;
+public class Group {
+	protected Set<Item> oggetti;
 	protected int pesoTotale;
 }

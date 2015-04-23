@@ -22,16 +22,16 @@ import db.DBConnect;
 import bean.*;
 
 public class SimpleDAO {
-	public List<Oggetto> getObjectList() {
+	public List<Item> getObjectList() {
 		final String sql = "SELECT * FROM oggetti LIMIT 50";
-		List<Oggetto> items = new ArrayList<Oggetto>();
+		List<Item> items = new ArrayList<Item>();
 	
 		try {
 			Connection conn = DBConnect.getInstance().getConnection();
 			PreparedStatement st = conn.prepareStatement(sql);
 			ResultSet rs = st.executeQuery();
 			while (rs.next()) {
-				Oggetto o = new Oggetto(rs.getInt("ID"), rs.getInt("peso"));
+				Item o = new Item(rs.getInt("ID"), rs.getInt("peso"));
 				items.add(o);
 			}
 
